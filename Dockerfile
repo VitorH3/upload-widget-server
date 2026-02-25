@@ -20,7 +20,7 @@ COPY --from=dependencies /usr/src/app/node_modules ./node_modules
 RUN pnpm build
 RUN pnpm prune --prod
 
-FROM gcr.io/distroless/nodejs20-debian12 AS deploy
+FROM cgr.dev/chainguard/node:latest AS deploy
 
 USER 1000
 
