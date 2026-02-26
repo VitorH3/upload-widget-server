@@ -32,7 +32,7 @@ jobs:
         id: build-push-image
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-          ECR_REPOSITORY: ${{ vars.CONTAINER_REPOSITORY }}
+          ECR_REPOSITORY: ${{ vars.ECR_REPOSITORY }}
         run: | 
           docker build -t widget-server:v3 .
           docker tag widget-server:v3 $ECR_REGISTRY/$ECR_REPOSITORY
