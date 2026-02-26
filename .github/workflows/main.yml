@@ -1,12 +1,9 @@
-name: widget-server pipe
+name: widget-server pipe AWS ECR
 
 on:
   push:
     branches: 
       - 'main'
-
-env:
-  CONTAINER_REPOSITORY: upload-widget-server
 
 jobs:
   Build:
