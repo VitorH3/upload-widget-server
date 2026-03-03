@@ -58,7 +58,7 @@ jobs:
             ${{ steps.login-ecr.outputs.registry }}/${{ vars.ECR_REPOSITORY }}:test
 
       - name: Run Trivy vulnerability scanner
-        id: run-trivy-scanner
+        id: run-trivy-vulnerability-scanner
         uses: aquasecurity/trivy-action@0.29.0
         with:
           image-ref: '${{ steps.login-ecr.outputs.registry }}/${{ vars.ECR_REPOSITORY }}:test'
