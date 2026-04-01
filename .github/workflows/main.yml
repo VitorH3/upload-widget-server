@@ -9,14 +9,6 @@ jobs:
   Build:
     name: Build
     runs-on: ubuntu-latest
-
-    env:
-      CLOUDFLARE_ACCESS_KEY_ID: ${{ secrets.CLOUDFLARE_ACCESS_KEY_ID }}
-      CLOUDFLARE_SECRET_ACCESS_KEY: ${{ secrets.CLOUDFLARE_SECRET_ACCESS_KEY }}
-      CLOUDFLARE_BUCKET: ${{ secrets.CLOUDFLARE_BUCKET }}
-      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-      CLOUDFLARE_PUBLIC_URL: ${{ secrets.CLOUDFLARE_PUBLIC_URL }}
-
     steps:
       - name: Checkout
         id: checkout
